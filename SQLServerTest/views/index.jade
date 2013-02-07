@@ -1,0 +1,12 @@
+h1= title
+p Welcome to #{title}
+table
+    tr
+        th Customer ID
+        th First Name
+        th Last Name
+    each record in records
+        tr
+            td= record.customer_id
+            td= record.firstName
+            td= record.lastName
