@@ -14,7 +14,7 @@ function setCorrectValues(post, attrs) {
 		}
 	}
 }
-l
+
 describe('Post Model', function() {
 	describe('Miscellaneous', function() {
 		it ('should create a new empty Post', function(done) {
