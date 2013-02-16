@@ -23,7 +23,7 @@ $ node server.js
 
 <h3>Then:</h3>
 
-1. in command line:
+(1) in command line:
 
 $ curl http://localhost:8080/user/tester
 
@@ -33,7 +33,7 @@ $ curl http://localhost:8080/id/511d5a2d7674417d22000002
 
 $ curl http://localhost:8080/
 
-2. or in browser:
+(2) or in browser:
 
 * http://localhost:8080/user/tester
 * http://localhost:8080/email/v@bc.com

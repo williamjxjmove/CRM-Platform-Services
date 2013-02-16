@@ -23,7 +23,7 @@ $ node app.js
 
 <h3> Then: </h3>
 
-1. in command line:
+(1) in command line:
 
 $ curl http://localhost:8088/user/tester
 
@@ -33,7 +33,7 @@ $ curl http://localhost:8088/id/511d5a2d7674417d22000002
 
 $ curl http://localhost:8088/
 
-2. or in browser:
+(2) or in browser:
 
 * http://localhost:8088/user/tester
 * http://localhost:8088/email/v@bc.com
