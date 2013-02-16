@@ -1,14 +1,14 @@
 
 <h1>Restful web-service for Goal Settings:</h1>
 
-<h2>Restify-MongoJS web service for Goal Settings</h2>
+<h2>Restify-MongoJS version</h2>
 
-- Input:
+<h3> Input:</h3>
 	GET retrieving keyword
-- Output:
+<h3> Output:</h3>
 	REST JSON data 
 
-- Usage:
+<h3> Usage: </h3>
 
 $ cd $HOME; mkdir gs1 && cd gs1
 
@@ -22,18 +22,25 @@ $ npm install
 $ node app.js
 
 - Then:
+
 1. in command line:
 
 $ curl http://localhost:8088/user/tester
+
 $ curl http://localhost:8088/email/v@bc.com
+
 $ curl http://localhost:8088/id/511d5a2d7674417d22000002
+
 $ curl http://localhost:8088/
 
 2. or in browser:
 
 http://localhost:8088/user/tester
+
 http://localhost:8088/email/v@bc.com
+
 http://localhost:8088/id/511d5a2d7674417d22000002
+
 http://localhost:8088/
 
 
