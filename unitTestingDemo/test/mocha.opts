@@ -1,0 +1,4 @@
+-R spec
+--recursive
+--ignore-leaks
+--require assert
