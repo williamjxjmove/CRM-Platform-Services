@@ -1,0 +1,72 @@
+<%- errorMessagesFor(test) %>
+<div class="control-group">
+   <%- form.label("name", false, {class: "control-label"}) %>
+   <div class="controls">
+       <%- form.input("name") %>
+   </div>
+</div>
+<div class="control-group">
+   <%- form.label("first_name", false, {class: "control-label"}) %>
+   <div class="controls">
+       <%- form.input("info[first_name]") %>
+   </div>
+</div>
+<div class="control-group">
+   <%- form.label("last_name", false, {class: "control-label"}) %>
+   <div class="controls">
+       <%= form.input("id") %>
+   </div>
+</div>
+<div class="control-group">
+   <%- form.label("phone", false, {class: "control-label"}) %>
+   <div class="controls">
+       <%= form.input("info.phone") %>
+   </div>
+</div>
+<div class="control-group">
+   <%- form.label("e_mail", false, {class: "control-label"}) %>
+   <div class="controls">
+       <%= form.input("info.e_mail") %>
+   </div>
+</div>
+<div class="control-group">
+   <%- form.label("contacts", false, {class: "control-label"}) %>
+   <div class="controls">
+       <%- form.input("count[contacts]") %>
+   </div>
+</div>
+<div class="control-group">
+   <%- form.label("prospects", false, {class: "control-label"}) %>
+   <div class="controls">
+       <%- form.input("count.prospects") %>
+   </div>
+</div>
+<div class="control-group">
+   <%- form.label("closings", false, {class: "control-label"}) %>
+   <div class="controls">
+       <%- form.input("count[closings]") %>
+   </div>
+</div>
+<div class="control-group">
+   <%- form.label("listings", false, {class: "control-label"}) %>
+   <div class="controls">
+       <%- form.input("count.listings") %>
+   </div>
+</div>
+<div class="control-group">
+   <%- form.label("createdAt", false, {class: "control-label"}) %>
+   <div class="controls">
+       <%- form.input("createdAt") %>
+   </div>
+</div>
+<div class="control-group">
+
+   <%- form.label("active", false, {class: "control-label"}) %>
+
+   <div class="controls">
+
+       <%- form.checkbox("active") %>
+
+   </div>
+
+</div>
