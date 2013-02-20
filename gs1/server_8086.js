@@ -12,7 +12,7 @@ var goal = db.collection('Test');
 function get_user(req, res, next) 
 {
 	// res.send('hello ' + req.params.username);
-	goal.findOne({'user':req.params.username}, function(err, item) {
+	goal.findOne({'name':req.params.username}, function(err, item) {
                 if(item) {
                         console.log(item); res.send(item); res.end();
 		}

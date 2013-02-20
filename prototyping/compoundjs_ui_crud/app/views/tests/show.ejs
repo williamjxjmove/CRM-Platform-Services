@@ -1,0 +1,42 @@
+<ul class="breadcrumb">
+    <li><a href="/">Home</a> <span class="divider">/</span></li>
+    <li><a href="<%- pathTo.tests() %>">tests</a> <span class="divider">/</span></li>
+    <li class="active"><a href="#">Details of test</a></li>
+</ul>
+
+<div class="page-header">
+    <h1>Details of test</h1>
+</div>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr><th>name</th><td><%= test.name %></td></tr>
+
+        <tr><th>first_name</th><td><%= test.info.first_name %></td></tr>
+
+        <tr><th>last_name</th><td><%= test.info.last_name %></td></tr>
+
+        <tr><th>phone</th><td><%= test.info.phone %></td></tr>
+
+        <tr><th>e_mail</th><td><%= test.info.e_mail %></td></tr>
+
+        <tr><th>contacts</th><td><%= test.count.contacts %></td></tr>
+
+        <tr><th>prospects</th><td><%= test.count.prospects %></td></tr>
+
+        <tr><th>closings</th><td><%= test.count.closings %></td></tr>
+
+        <tr><th>listings</th><td><%= test.count.listings %></td></tr>
+
+        <tr><th>createdAt</th><td><%= test.createdAt %></td></tr>
+
+        <tr><th>active</th><td><%= test.active %></td></tr>
+    </tbody>
+</table>
+
+<div class="well">
+    <%- link_to('<i class="icon-edit icon-white"></i> Edit', pathTo.edit_test(test), {class: 'btn btn-primary'}) %>
+    <%- link_to('<i class="icon-remove icon-white"></i> Delete', pathTo.test(test), {class: 'btn btn-danger', method: 'delete', remote: true, jsonp: '(function (u) { location.href = u; })'}) %>
+    or
+    <%- link_to('Back to index', pathTo.tests()) %>
+</div>
