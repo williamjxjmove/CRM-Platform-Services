@@ -1,4 +1,4 @@
-# UI for Goal Setting agents data CRUD
+# UI for Goal Setting TPOUser data CRUD
 
 ## CompoundJS + JugglingDB + MongoDB version
 
