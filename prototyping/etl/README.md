@@ -13,7 +13,7 @@ vi /etc/yum.repos.d/epel.repo
 	
 sudo yum install freetds freetds-devel --enablerepo=epel 
 
-### Install Gem
+### Install Gems
 
 sudo bundle install
 
