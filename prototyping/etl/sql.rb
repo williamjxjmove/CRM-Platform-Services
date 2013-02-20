@@ -17,12 +17,16 @@ class TPODB
 	end
 
 	def self.get_agent_db(database_id)
-		row = @@profile_db_client.execute("select top 1 db_server_name from databases with (nolock) where database_id = #{database_id}").first
+		row = @@profile_db_client.execute("select top 1 db_server_name from databases with (nolock) \
+		  where database_id = #{database_id}").first
 		row['db_server_name']
 	end
 
 	def self.get_user_info (use_name)
-		sql = "select top 1 p.profile_id, u.user_id,  p.database_id, first_name, last_name, work_phone, e_mail from  users_to_profiles up with (nolock) inner join users u  with (nolock) on u.user_id = up.user_id inner join profiles p with (nolock) on p.profile_id =  up.profile_id and p.account_id =  u.account_id  where u.login_name = '#{use_name}'"
+		sql = "select top 1 p.profile_id, u.user_id,  p.database_id, first_name, last_name, work_phone, e_mail 
+		from  users_to_profiles up with (nolock) inner join users u  with (nolock) on u.user_id = up.user_id 
+		inner join profiles p with (nolock) on p.profile_id = up.profile_id and p.account_id =  u.account_id  
+		where u.login_name = '#{use_name}'"
 		@@profile_db_client.execute(sql).first
 	end
 
@@ -33,9 +37,9 @@ class TPODB
 
 	def self.get_sql(key, profile_id, user_id)
 		sql_list = {	
-			"c.p" =>  "select count(*) from contacts with (nolock) where profile_id = '#{profile_id} and access_mode < 2'",
-			"a.p" => "select count(*) from activities with (nolock) where profile_id = '#{profile_id}' and is_done = 1", 
-			"a.u" => "https://sms-staging.topproduceronline.com",
+			"c.p" =>  "select count(*) from contacts with (nolock) where profile_id = '#{profile_id}' and access_mode < 2",
+			"a.u" =>  "select count(*) from activities with (nolock) where profile_id = '#{profile_id}' and assigned_to_id = '#{user_id}' 
+			      and is_done = 1 and today_business_type_id in (1,2)",
 			"cl.p" => "select count(*) from closings with (nolock) where profile_id = '#{profile_id}'"
 		}
 		sql_list[key] 
@@ -62,10 +66,12 @@ class TPODB
 		client = get_client(agent_db, 'agent')
 
 		contacts_num = get_count(client, get_sql('c.p', profile_id, user_id))
-		prospects_num = get_count(client, get_sql('a.p', profile_id, user_id))
+		prospects_num = get_count(client, get_sql('a.u', profile_id, user_id))
 		closings_num = 0
 		
-		 {MONGO_PRIMARY_KEY=> user_name, 'info' => {'first_name' => row['first_name'], 'last_name' => row['last_name'], 'phone' => row['work_phone'], 'e_mail' => row['e_mail']}, 'count' => {'contacts' => contacts_num, 'prospects' => prospects_num, 'closings' => closings_num}}
+		 {MONGO_PRIMARY_KEY=> user_name, 'info' => {'first_name' => row['first_name'], \
+		   'last_name' => row['last_name'], 'phone' => row['work_phone'], 'e_mail' => row['e_mail']}, \
+		   'count' => {'contacts' => contacts_num, 'prospects' => prospects_num, 'closings' => closings_num}}
 	end
 	
 	def self.save_bi_data(coll, user_name)

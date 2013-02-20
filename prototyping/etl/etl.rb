@@ -17,8 +17,8 @@ def init_logger
 	# console messages
 	logger.outputters = StdoutOutputter.new(:console)
 
-	# logfile = RollingFileOutputter
-	file = "#{APP_NAME }.log"
+	# logfile 
+	file = "#{APP_NAME}.log"
 	File.delete(file) if  File.exist?(file) && File.size(file) > 1024 * 1024
 	logfile = FileOutputter.new(APP_NAME, {:filename => file, :trunc => false})
 	logfile.formatter = PatternFormatter.new(:pattern => "%t [%l] %d :: %m")
@@ -31,7 +31,7 @@ end
 @log = init_logger()
 @log.info("ETL Start")
 
-results = ['aiminagent', 'garryself123'] #test
+results = ['aiminagent', 'garryself'] #test 
 #results = TPODB.get_active_users()
 results.each do |row|
 	user_name = row
