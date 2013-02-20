@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var connectionUrl = 'mongodb://localhost/TpoDemo';
+var connectionUrl = 'mongodb://localhost/test';
 
 var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
@@ -18,9 +18,9 @@ var TpoUserSchema = Schema({
         , phone: String
         , e_mail: String
     }
-    , name: String
+    , user: String
 });
-var TpoUser = mongoose.model('TpoUser', TpoUserSchema, 'TpoUsers');
+var TpoUser = mongoose.model('user', TpoUserSchema, 'tpouser');
 
 // Functions
 exports.all = function (callback) {
