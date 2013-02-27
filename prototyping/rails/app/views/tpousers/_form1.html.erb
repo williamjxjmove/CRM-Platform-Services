@@ -1,0 +1,57 @@
+<%= form_for(@tpouser) do |f| %>
+  <% if @tpouser.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tpouser.errors.count, "error") %> prohibited this tpouser from being saved:</h2>
+
+      <ul>
+      <% @tpouser.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :e_mail %><br />
+    <%= f.text_field :e_mail %>
+  </div>
+  <div class="field">
+    <%= f.label :contacts %><br />
+    <%= f.text_field :contacts %>
+  </div>
+  <div class="field">
+    <%= f.label :prospects %><br />
+    <%= f.text_field :prospects %>
+  </div>
+  <div class="field">
+    <%= f.label :closings %><br />
+    <%= f.text_field :closings %>
+  </div>
+  <div class="field">
+    <%= f.label :listings %><br />
+    <%= f.text_field :listings %>
+  </div>
+
+
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

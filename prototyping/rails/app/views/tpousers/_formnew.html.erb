@@ -1,0 +1,61 @@
+<%= form_for(@tpouser) do |f| %>
+  <% if @tpouser.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tpouser.errors.count, "error") %> prohibited this tpouser from being saved:</h2>
+
+      <ul>
+      <% @tpouser.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <input type="text" size="30" name="tpouser.info[first_name]" 
+    id="tpouser_info_first_name" value="">
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+   <input type="text" size="30" name="tpouser.info[last_name]" 
+    id="tpouser_info_last_name" value="">    
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+   <input type="text" size="30" name="tpouser.info[phone]" 
+    id="tpouser_info_phone" value="">    
+  </div>
+  <div class="field">
+    <%= f.label :e_mail %><br />
+   <input type="text" size="30" name="tpouser.info[e_mail]" 
+    id="tpouser_info_e_mail" value="">    
+  </div>
+  <div class="field">
+    <%= f.label :contacts %><br />
+   <input type="text" size="30" name="tpouser.count[contacts]" 
+    id="tpouser_count_contacts" value="">    
+  </div>
+  <div class="field">
+    <%= f.label :prospects %><br />
+   <input type="text" size="30" name="tpouser.count[prospects]" 
+    id="tpouser_count_prospects" value="">    
+  </div>
+  <div class="field">
+    <%= f.label :closings %><br />
+   <input type="text" size="30" name="tpouser.count[closings]" 
+    id="tpouser_count_closings" value="">    
+  </div>
+  <div class="field">
+    <%= f.label :listings %><br />
+   <input type="text" size="30" name="tpouser.count[listings]" 
+    id="tpouser_count_listings" value="">    
+  </div>
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<h1>Listing tpousers</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Phone</th>
+    <th>E mail</th>
+    <th>Contacts</th>
+    <th>Prospects</th>
+    <th>Closings</th>
+    <th>Listings</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tpousers.each do |tpouser| %>
+  <tr>
+    <td><%= tpouser.info['first_name'] %></td>
+    <td><%= tpouser.info['last_name'] %></td>
+    <td><%= tpouser.info['phone'] %></td>
+    <td><%= tpouser.info['e_mail'] %></td>
+    <td><%= tpouser.count['contacts'] %></td>
+    <td><%= tpouser.count['prospects'] %></td>
+    <td><%= tpouser.count['closings'] %></td>
+    <td><%= tpouser.count['listings'] %></td>
+    <td><%= tpouser.user %></td>
+    <td><%= link_to 'Show', tpouser %></td>
+    <td><%= link_to 'Edit', edit_tpouser_path(tpouser) %></td>
+    <td><%= link_to 'Destroy', tpouser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tpouser', new_tpouser_path %>
