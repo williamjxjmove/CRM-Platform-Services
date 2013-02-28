@@ -5,6 +5,7 @@ Rails MVC CRUD interface
 
 <h2>Quick start:</h2>
 $ cd __HERE__
+
 $ rails server
 
 Then, in browser:
@@ -19,8 +20,8 @@ MongoDB is configured at: config/initializers/mongo_config.rb
 # MongoDB IP:
 10.185.20.184
 
-# MongoDB Database:
+## MongoDB Database:
 test
 
-# MogoDB Collection:
+## MogoDB Collection:
 tpouser
