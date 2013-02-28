@@ -7182,3 +7182,406 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 10.185.4.147 at 2013-02-27 14:20:46 -0800
 Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tpousers/512e86077739e375d8000004/edit" for 10.185.4.147 at 2013-02-27 14:32:25 -0800
+Processing by TpousersController#edit as HTML
+  Parameters: {"id"=>"512e86077739e375d8000004"}
+  Rendered tpousers/_form.html.erb (3.7ms)
+  Rendered tpousers/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 11ms (Views: 9.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.185.4.147 at 2013-02-27 14:32:25 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.185.4.147 at 2013-02-27 14:32:25 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tpousers.css?body=1" for 10.185.4.147 at 2013-02-27 14:32:25 -0800
+Served asset /tpousers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.185.4.147 at 2013-02-27 14:32:25 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.185.4.147 at 2013-02-27 14:32:25 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.185.4.147 at 2013-02-27 14:32:25 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tpousers.js?body=1" for 10.185.4.147 at 2013-02-27 14:32:25 -0800
+Served asset /tpousers.js - 304 Not Modified (0ms)
+
+
+Started GET "/tpousers/512e86077739e375d8000004" for 10.185.4.147 at 2013-02-27 14:32:31 -0800
+Processing by TpousersController#show as HTML
+  Parameters: {"id"=>"512e86077739e375d8000004"}
+  Rendered tpousers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 7ms (Views: 5.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.185.4.147 at 2013-02-27 14:32:31 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.185.4.147 at 2013-02-27 14:32:31 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tpousers.css?body=1" for 10.185.4.147 at 2013-02-27 14:32:31 -0800
+Served asset /tpousers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.185.4.147 at 2013-02-27 14:32:31 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tpousers.js?body=1" for 10.185.4.147 at 2013-02-27 14:32:31 -0800
+Served asset /tpousers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.185.4.147 at 2013-02-27 14:32:31 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.185.4.147 at 2013-02-27 14:32:31 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tpousers" for 10.185.4.147 at 2013-02-27 14:32:33 -0800
+Processing by TpousersController#index as HTML
+  Rendered tpousers/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 8ms (Views: 5.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.185.4.147 at 2013-02-27 14:32:33 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tpousers.css?body=1" for 10.185.4.147 at 2013-02-27 14:32:33 -0800
+Served asset /tpousers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.185.4.147 at 2013-02-27 14:32:33 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tpousers.js?body=1" for 10.185.4.147 at 2013-02-27 14:32:33 -0800
+Served asset /tpousers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.185.4.147 at 2013-02-27 14:32:33 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.185.4.147 at 2013-02-27 14:32:33 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.185.4.147 at 2013-02-27 14:32:33 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/tpousers/new" for 10.185.4.147 at 2013-02-27 14:46:59 -0800
+Processing by TpousersController#new as HTML
+  Rendered tpousers/_formnew.html.erb (3.5ms)
+  Rendered tpousers/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 9ms (Views: 8.7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.185.4.147 at 2013-02-27 14:46:59 -0800
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.185.4.147 at 2013-02-27 14:46:59 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tpousers.css?body=1" for 10.185.4.147 at 2013-02-27 14:46:59 -0800
+Served asset /tpousers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.185.4.147 at 2013-02-27 14:46:59 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.185.4.147 at 2013-02-27 14:46:59 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tpousers.js?body=1" for 10.185.4.147 at 2013-02-27 14:46:59 -0800
+Served asset /tpousers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.185.4.147 at 2013-02-27 14:46:59 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tpousers/512e86077739e375d8000004" for 10.185.4.147 at 2013-02-27 14:47:02 -0800
+Processing by TpousersController#show as HTML
+  Parameters: {"id"=>"512e86077739e375d8000004"}
+  Rendered tpousers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 7ms (Views: 5.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.185.4.147 at 2013-02-27 14:47:02 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.185.4.147 at 2013-02-27 14:47:02 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tpousers.css?body=1" for 10.185.4.147 at 2013-02-27 14:47:02 -0800
+Served asset /tpousers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.185.4.147 at 2013-02-27 14:47:02 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.185.4.147 at 2013-02-27 14:47:02 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.185.4.147 at 2013-02-27 14:47:02 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tpousers.js?body=1" for 10.185.4.147 at 2013-02-27 14:47:02 -0800
+Served asset /tpousers.js - 304 Not Modified (0ms)
+
+
+Started GET "/tpousers/512e86077739e375d8000004" for 10.185.20.184 at 2013-02-27 14:47:09 -0800
+Processing by TpousersController#show as XML
+  Parameters: {"id"=>"512e86077739e375d8000004"}
+  Rendered tpousers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 7ms (Views: 5.2ms)
+
+
+Started GET "/tpousers/" for 10.185.20.184 at 2013-02-27 14:50:32 -0800
+Processing by TpousersController#index as XML
+  Rendered tpousers/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 5.9ms)
+
+
+Started GET "/tpousers/512e86077739e375d8000004/edit" for 10.185.4.147 at 2013-02-27 15:21:36 -0800
+Processing by TpousersController#edit as HTML
+  Parameters: {"id"=>"512e86077739e375d8000004"}
+  Rendered tpousers/_form.html.erb (3.2ms)
+  Rendered tpousers/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 10ms (Views: 8.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.185.4.147 at 2013-02-27 15:21:36 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.185.4.147 at 2013-02-27 15:21:36 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.185.4.147 at 2013-02-27 15:21:36 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tpousers.css?body=1" for 10.185.4.147 at 2013-02-27 15:21:36 -0800
+Served asset /tpousers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.185.4.147 at 2013-02-27 15:21:36 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tpousers.js?body=1" for 10.185.4.147 at 2013-02-27 15:21:36 -0800
+Served asset /tpousers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.185.4.147 at 2013-02-27 15:21:36 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tpousers" for 10.185.4.147 at 2013-02-27 15:21:37 -0800
+Processing by TpousersController#index as HTML
+  Rendered tpousers/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 7ms (Views: 5.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.185.4.147 at 2013-02-27 15:21:37 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.185.4.147 at 2013-02-27 15:21:37 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tpousers.css?body=1" for 10.185.4.147 at 2013-02-27 15:21:37 -0800
+Served asset /tpousers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.185.4.147 at 2013-02-27 15:21:37 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tpousers.js?body=1" for 10.185.4.147 at 2013-02-27 15:21:37 -0800
+Served asset /tpousers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.185.4.147 at 2013-02-27 15:21:37 -0800
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.185.4.147 at 2013-02-27 15:21:37 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/tpousers/new" for 10.185.4.147 at 2013-02-27 15:21:39 -0800
+Processing by TpousersController#new as HTML
+  Rendered tpousers/_formnew.html.erb (2.6ms)
+  Rendered tpousers/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 7ms (Views: 7.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.185.4.147 at 2013-02-27 15:21:39 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.185.4.147 at 2013-02-27 15:21:39 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.185.4.147 at 2013-02-27 15:21:39 -0800
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tpousers.css?body=1" for 10.185.4.147 at 2013-02-27 15:21:39 -0800
+Served asset /tpousers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.185.4.147 at 2013-02-27 15:21:39 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.185.4.147 at 2013-02-27 15:21:39 -0800
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tpousers.js?body=1" for 10.185.4.147 at 2013-02-27 15:21:39 -0800
+Served asset /tpousers.js - 304 Not Modified (0ms)
+
+
+Started POST "/tpousers" for 10.185.4.147 at 2013-02-27 15:22:16 -0800
+Processing by TpousersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dSidxeEIRWP22IAoxZ1RhLHkOUIGtgWL2UvEVUtbRSA=", "tpouser.info"=>{"first_name"=>"first", "last_name"=>"last", "phone"=>"6049998888", "e_mail"=>"first_last@move.com"}, "tpouser.count"=>{"contacts"=>"1", "prospects"=>"2", "closings"=>"3", "listings"=>"4"}, "tpouser"=>{"user"=>"first_last"}, "commit"=>"Create Tpouser"}
+Redirected to http://10.185.20.184:3000/tpousers
+Completed 302 Found in 4ms
+
+
+Started GET "/tpousers" for 10.185.4.147 at 2013-02-27 15:22:16 -0800
+Processing by TpousersController#index as HTML
+  Rendered tpousers/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 9ms (Views: 6.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.185.4.147 at 2013-02-27 15:22:16 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.185.4.147 at 2013-02-27 15:22:16 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tpousers.css?body=1" for 10.185.4.147 at 2013-02-27 15:22:16 -0800
+Served asset /tpousers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.185.4.147 at 2013-02-27 15:22:16 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tpousers.js?body=1" for 10.185.4.147 at 2013-02-27 15:22:16 -0800
+Served asset /tpousers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.185.4.147 at 2013-02-27 15:22:16 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.185.4.147 at 2013-02-27 15:22:16 -0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tpousers" for 10.185.4.147 at 2013-02-27 16:54:04 -0800
+Processing by TpousersController#index as HTML
+  Rendered tpousers/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 323ms (Views: 295.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.185.4.147 at 2013-02-27 16:54:05 -0800
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.185.4.147 at 2013-02-27 16:54:05 -0800
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tpousers.css?body=1" for 10.185.4.147 at 2013-02-27 16:54:05 -0800
+Served asset /tpousers.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.185.4.147 at 2013-02-27 16:54:05 -0800
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.185.4.147 at 2013-02-27 16:54:05 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.185.4.147 at 2013-02-27 16:54:05 -0800
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/tpousers.js?body=1" for 10.185.4.147 at 2013-02-27 16:54:05 -0800
+Served asset /tpousers.js - 304 Not Modified (0ms)
+
+
+Started GET "/tpousers/new" for 10.185.4.147 at 2013-02-27 16:54:08 -0800
+Processing by TpousersController#new as HTML
+  Rendered tpousers/_formnew.html.erb (39.7ms)
+  Rendered tpousers/new.html.erb within layouts/application (51.3ms)
+Completed 200 OK in 70ms (Views: 69.9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.185.4.147 at 2013-02-27 16:54:09 -0800
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.185.4.147 at 2013-02-27 16:54:09 -0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tpousers.css?body=1" for 10.185.4.147 at 2013-02-27 16:54:09 -0800
+Served asset /tpousers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.185.4.147 at 2013-02-27 16:54:09 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.185.4.147 at 2013-02-27 16:54:09 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tpousers.js?body=1" for 10.185.4.147 at 2013-02-27 16:54:09 -0800
+Served asset /tpousers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.185.4.147 at 2013-02-27 16:54:09 -0800
+Served asset /application.js - 304 Not Modified (1ms)
