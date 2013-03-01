@@ -841,3 +841,95 @@ Started GET "/user/william.json" for 127.0.0.1 at 2013-02-28 18:11:23 -0800
 Processing by TpousersController#user as JSON
   Parameters: {"user"=>"william"}
 Completed 200 OK in 29ms (Views: 4.7ms)
+
+
+Started GET "/assets/rails.png" for 10.185.4.147 at 2013-03-01 11:16:26 -0800
+Served asset /rails.png - 200 OK (4ms)
+
+
+Started GET "/fname/first" for 10.185.4.147 at 2013-03-01 11:16:58 -0800
+Processing by TpousersController#fname as HTML
+  Parameters: {"first_name"=>"first"}
+Completed 500 Internal Server Error in 97ms
+
+ActionView::MissingTemplate (Missing template tpousers/fname, application/fname with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/home/movedev/gs/prototyping/web_services/app/views"
+):
+  app/controllers/tpousers_controller.rb:53:in `fname'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (2.4ms)
+
+
+Started GET "/fname/first.json" for 10.185.4.147 at 2013-03-01 11:17:06 -0800
+Processing by TpousersController#fname as JSON
+  Parameters: {"first_name"=>"first"}
+Completed 200 OK in 7ms (Views: 3.3ms)
+
+
+Started GET "/user/williamjxj" for 10.185.4.147 at 2013-03-01 11:19:22 -0800
+Processing by TpousersController#user as HTML
+  Parameters: {"user"=>"williamjxj"}
+Completed 500 Internal Server Error in 3ms
+
+ActionView::MissingTemplate (Missing template tpousers/user, application/user with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/home/movedev/gs/prototyping/web_services/app/views"
+):
+  app/controllers/tpousers_controller.rb:20:in `user'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/user/williamjxj.json" for 10.185.4.147 at 2013-03-01 11:19:27 -0800
+Processing by TpousersController#user as JSON
+  Parameters: {"user"=>"williamjxj"}
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/user/williamjxj" for 10.185.4.147 at 2013-03-01 11:24:40 -0800
+Processing by TpousersController#user as HTML
+  Parameters: {"user"=>"williamjxj"}
+Completed 200 OK in 11ms (Views: 1.3ms)
+
+
+Started GET "/user/williamjxj" for 10.185.4.147 at 2013-03-01 11:25:46 -0800
+Processing by TpousersController#user as HTML
+  Parameters: {"user"=>"williamjxj"}
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/user/williamjxj" for 10.185.4.147 at 2013-03-01 11:25:48 -0800
+Processing by TpousersController#user as HTML
+  Parameters: {"user"=>"williamjxj"}
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/user/williamjxj" for 10.185.4.147 at 2013-03-01 11:26:37 -0800
+Processing by TpousersController#user as HTML
+  Parameters: {"user"=>"williamjxj"}
+Completed 200 OK in 3ms (Views: 1.2ms)
+
+
+Started GET "/user/williamjxj" for 10.185.4.147 at 2013-03-01 11:26:38 -0800
+Processing by TpousersController#user as HTML
+  Parameters: {"user"=>"williamjxj"}
+Completed 200 OK in 3ms (Views: 1.1ms)
+
+
+Started GET "/fname/first.json" for 10.185.4.147 at 2013-03-01 11:27:27 -0800
+Processing by TpousersController#fname as JSON
+  Parameters: {"first_name"=>"first"}
+Completed 200 OK in 30ms (Views: 2.2ms)
+
+
+Started GET "/fname/first" for 10.185.4.147 at 2013-03-01 11:27:32 -0800
+Processing by TpousersController#fname as HTML
+  Parameters: {"first_name"=>"first"}
+Completed 200 OK in 6ms (Views: 2.1ms)
+
+
+Started GET "/fname/first.json" for 10.185.4.147 at 2013-03-01 11:27:45 -0800
+Processing by TpousersController#fname as JSON
+  Parameters: {"first_name"=>"first"}
+Completed 200 OK in 5ms (Views: 2.1ms)

@@ -2,8 +2,9 @@
 
 ## Features:
 
+Default port is <strong>3001</strong>.
 
-Can search by different columns:
+1. Can search by different fields/columns:
 
 <ul>
 <li> ID </li>
@@ -15,29 +16,36 @@ Can search by different columns:
 <li> ... ... </li>
 </ul>
 
+2. Can search multi-records, such as fname = 'first'
+
+3. can be used in browser and command-line like 'curl', 'wget' etc.
+
+4. The web-service works in 10.185.20.184:3001, work with http://10.185.20.184:3000/tpousers/ which is a CRUD interface.
 
 ## Usage:
 
-$ cd __HERE__
+$ cd _ _ HERE _ _
+
+$ bundle install (su to root if needed)
 
 $ rails server
 
 
 $ In browser:
 
-(1) http://localhost:3000/phone/1111111111.json 
+(1) http://localhost:3001/phone/123456789.json 
 
-(2) http://localhost:3000/user/kh.json 
+(2) http://localhost:3001/user/williamjxj
 
-(3) http://localhost:3000/fname/william.json 
+(3) http://localhost:3001/fname/first
 
-(4) http://localhost:3000/lname/last.json 
+(4) http://localhost:3001/lname/last.json 
 
 ## keys:
 
 $ rails new webservice --skip-active-record
 
-$ subl. rest/Gemfile:
+$ vi rest/Gemfile:
 
 require 'mongo'
   gem 'mongo_mapper', '~> 0.12.0'
@@ -48,7 +56,7 @@ require 'mongo'
 
 $ bundle install
 
-$ subl. config/initializers/mongo_config.rb:
+$ vi config/initializers/mongo_config.rb:
 
 MongoMapper.connection = Mongo::Connection.new('localhost', 27017)
 MongoMapper.database = "test"
@@ -58,6 +66,27 @@ if defined?(PhusionPassenger)
   MongoMapper.connection.connect if forked
    end
 end
+
+
+
+$ vi script/rails # change port number t 3001
+
+require "rails/commands/server"
+module Rails
+  class Server
+    def default_options
+      super.merge({
+        :Port        => 3001,
+        :environment => (ENV['RAILS_ENV'] || "development").dup,
+        :daemonize   => false,
+        :debugger    => false,
+        :pid         => File.expand_path("tmp/pids/server.pid"),
+        :config      => File.expand_path("config.ru")
+      })
+    end
+  end
+end
+
 
 
 $ rails generate scaffold tpouser user:string --skip-migration --orm mongo_mapper

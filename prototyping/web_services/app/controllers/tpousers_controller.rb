@@ -7,7 +7,7 @@ class TpousersController < ApplicationController
     puts '------------'
     @tpouser = Tpouser.find(params[:id])
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render json: @tpouser }
       format.json { render json: @tpouser }
       format.js  { render :json => @tpouser, :callback => params[:callback] }
     end
@@ -18,7 +18,7 @@ class TpousersController < ApplicationController
     puts '------------'
     @tpouser = Tpouser.find_by_user(params[:user])
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render json: @tpouser }
       format.json { render json: @tpouser }
       format.js  { render :json => @tpouser, :callback => params[:callback] }
     end
@@ -29,7 +29,7 @@ class TpousersController < ApplicationController
     puts '------------'
     @tpouser = Tpouser.where("info.e_mail" => params[:email]).all
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render json: @tpouser }
       format.json { render json: @tpouser }
       format.js  { render :json => @tpouser, :callback => params[:callback] }
     end
@@ -40,7 +40,7 @@ class TpousersController < ApplicationController
     puts '------------'
     @tpouser = Tpouser.where("info.phone" => params[:phone]).all
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render json: @tpouser }
       format.json { render json: @tpouser }
       format.js  { render :json => @tpouser, :callback => params[:callback] }
     end
@@ -51,7 +51,7 @@ class TpousersController < ApplicationController
     puts '------------'
     @tpouser = Tpouser.where("info.first_name" => params[:first_name]).all
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render json: @tpouser }
       format.json { render json: @tpouser }
       format.js  { render :json => @tpouser, :callback => params[:callback] }
     end
@@ -62,7 +62,7 @@ class TpousersController < ApplicationController
     puts '------------'
     @tpouser = Tpouser.where("info.last_name" => params[:last_name]).all
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render json: @tpouser }
       format.json { render json: @tpouser }
       format.js  { render :json => @tpouser, :callback => params[:callback] }
     end
