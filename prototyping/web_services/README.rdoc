@@ -19,7 +19,6 @@ Can search by different columns:
 
  ... ...
 
-</ul>
 
 ## Usage:
 
