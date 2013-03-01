@@ -10,9 +10,16 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 
+# William added on March-01,2013.
+# Please note that dirs like log/,tmp/ follow project, not in the root dir, so log/*.log is more accurate than /log/*.log.
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
-/tmp
+log/*.log
+
+/tmp/
 tmp/*
 
+# The /test is in root dir, not in project/ dir, so safe for unit-test.
 /test
+
