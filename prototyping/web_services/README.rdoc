@@ -1,4 +1,39 @@
-$ rails new rest --skip-active-record
+# Goal Settings Web Service
+
+## Features:
+
+
+Can search by different columns:
+
+<ul>
+<li> ID </li>
+<li> User </li>
+<li> Phone </li>
+<li> E-mail </li>
+<li> First Name</li>
+<li> Last Name</li>
+<li> ... ...</li>
+</ul>
+
+## Usage:
+
+$ cd __HERE__
+
+$ rails server
+
+
+$ In browser:
+
+<ul>
+<li> http://localhost:3000/phone/1111111111.json </li>
+<li> http://localhost:3000/user/kh.json </li>
+<li> http://localhost:3000/fname/william.json </li>
+<li> http://localhost:3000/lname/last.json </li>
+</ul>
+
+## keys:
+
+$ rails new webservice --skip-active-record
 
 $ subl. rest/Gemfile:
 require 'mongo'
@@ -22,7 +57,11 @@ end
 
 
 $ rails generate scaffold tpouser user:string --skip-migration --orm mongo_mapper
+
 $ rails generate model Info  first_name:string last_name:string phone:string e_mail:string --skip-migration --orm mongo_mapper
+
 $ rails generate model Count contacts:Integer prospects:Integer closings:Integer listings:Integer --skip-migration --orm mongo_mapper
 
+
+$ do coding
 
