@@ -46,18 +46,18 @@ $ In browser:
 $ rails new webservice --skip-active-record
 
 $ vi rest/Gemfile:
-
+<pre>
 require 'mongo'
   gem 'mongo_mapper', '~> 0.12.0'
   gem 'bson_ext', '~> 1.8.2'
   gem 'bson', '~> 1.8.2'
   gem 'mongo', '~> 1.8.2'
-
+</pre>
 
 $ bundle install
 
 $ vi config/initializers/mongo_config.rb:
-
+<pre>
 MongoMapper.connection = Mongo::Connection.new('localhost', 27017)
 MongoMapper.database = "test"
  
@@ -66,11 +66,11 @@ if defined?(PhusionPassenger)
   MongoMapper.connection.connect if forked
    end
 end
-
+</pre>
 
 
 $ vi script/rails # change port number t 3001
-
+<pre>
 require "rails/commands/server"
 module Rails
   class Server
@@ -86,7 +86,7 @@ module Rails
     end
   end
 end
-
+</pre>
 
 
 $ rails generate scaffold tpouser user:string --skip-migration --orm mongo_mapper

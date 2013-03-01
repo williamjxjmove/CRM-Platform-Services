@@ -933,3 +933,9 @@ Started GET "/fname/first.json" for 10.185.4.147 at 2013-03-01 11:27:45 -0800
 Processing by TpousersController#fname as JSON
   Parameters: {"first_name"=>"first"}
 Completed 200 OK in 5ms (Views: 2.1ms)
+
+
+Started GET "/fname/first" for 10.185.4.147 at 2013-03-01 11:32:09 -0800
+Processing by TpousersController#fname as HTML
+  Parameters: {"first_name"=>"first"}
+Completed 200 OK in 34ms (Views: 3.3ms)
