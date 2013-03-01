@@ -5,14 +5,20 @@
 
 Can search by different columns:
 
-<ul>
-<li> ID </li>
-<li> User </li>
-<li> Phone </li>
-<li> E-mail </li>
-<li> First Name</li>
-<li> Last Name</li>
-<li> ... ...</li>
+(1) ID 
+
+(2) User 
+
+(3) Phone 
+
+(4) E-mail 
+
+(5) First Name
+
+(6) Last Name
+
+ ... ...
+
 </ul>
 
 ## Usage:
@@ -24,18 +30,20 @@ $ rails server
 
 $ In browser:
 
-<ul>
-<li> http://localhost:3000/phone/1111111111.json </li>
-<li> http://localhost:3000/user/kh.json </li>
-<li> http://localhost:3000/fname/william.json </li>
-<li> http://localhost:3000/lname/last.json </li>
-</ul>
+(1) http://localhost:3000/phone/1111111111.json 
+
+(2) http://localhost:3000/user/kh.json 
+
+(3) http://localhost:3000/fname/william.json 
+
+(4) http://localhost:3000/lname/last.json 
 
 ## keys:
 
 $ rails new webservice --skip-active-record
 
 $ subl. rest/Gemfile:
+
 require 'mongo'
   gem 'mongo_mapper', '~> 0.12.0'
   gem 'bson_ext', '~> 1.8.2'
@@ -46,6 +54,7 @@ require 'mongo'
 $ bundle install
 
 $ subl. config/initializers/mongo_config.rb:
+
 MongoMapper.connection = Mongo::Connection.new('localhost', 27017)
 MongoMapper.database = "test"
  
@@ -63,5 +72,5 @@ $ rails generate model Info  first_name:string last_name:string phone:string e_m
 $ rails generate model Count contacts:Integer prospects:Integer closings:Integer listings:Integer --skip-migration --orm mongo_mapper
 
 
-$ do coding
+$ do coding...
 
