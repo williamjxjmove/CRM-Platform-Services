@@ -5,19 +5,15 @@
 
 Can search by different columns:
 
-(1) ID 
-
-(2) User 
-
-(3) Phone 
-
-(4) E-mail 
-
-(5) First Name
-
-(6) Last Name
-
- ... ...
+<ul>
+<li> ID </li>
+<li> User </li>
+<li> Phone </li>
+<li> E-mail </li>
+<li> First Nam </li>
+<li> Last Nam </li>
+<li> ... ... </li>
+</ul>
 
 
 ## Usage:
