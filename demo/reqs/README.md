@@ -14,6 +14,14 @@ Please git pull the source from github.com:
 
 git@github.com:MoveInc/CRM-Platform-Services.git: CRM-Platform-Services / demo / reqs /
 
+Useful scripts:
+<pre>
+all1.sh  port replica_name 
+start1.sh server port replica_name
+init2.sh  port replica_name
+mm3.sh port
+</pre>
+
 
 ## in the reqs/ dir:
 
@@ -25,9 +33,9 @@ sudo ./start1.sh server port replica_name
 <pre>
 all1.sh port_number replica_name
 e.g:
-$ all1.sh 50110 SetA
+$ all1.sh 50111 SetA
 </pre>
-will setup 3 different servers by using '50110' port.
+will setup 3 different servers by using '50111' port.
 
 2) init2.sh
 inits.sh port_number replica_name
