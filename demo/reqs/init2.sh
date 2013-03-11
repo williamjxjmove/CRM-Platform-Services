@@ -6,29 +6,31 @@
 # rs.add('localhost:29103')
 # rs.initiate()
 
-if [ "$#" -eq 1 ]; then
+if [ "$#" -eq 2 ]; then
   port=$1
+  repset=$2
 else
-  echo "Usage: $0 port"
-  exit
+  echo "Usage: $0 port replica_name"
+  exit 6
 fi
 
 
+#{_id:2,host:"aguo02vv.corp.homestore.net:50006",priority:1},
 mongo wjiang02vv.corp.homestore.net:$port <<EOF
 
 rs.status()
 
 var cfg = {
-  _id:"SetA",
+  _id:"$repset",
   members:
   [
     {_id:0,host:"wjiang02vv.corp.homestore.net:$port",priority:4},
     {_id:1,host:"mlinde02vv.corp.homestore.net:$port",priority:2},
-    {_id:2,host:"aguo02vv.corp.homestore.net:$port",priority:1},
   ]
-
 }
+
 rs.initiate(cfg);
+
 rs.conf()
 
 EOF
@@ -36,14 +38,15 @@ EOF
 mongo mlinde02vv.corp.homestore.net:$port <<EOF
 
 rs.slaveOk()
+
 rs.conf()
 
 EOF
 
 
-mongo aguo02vv.corp.homestore.net:$port <<EOF
+#mongo aguo02vv.corp.homestore.net:$port <<EOF
 
-rs.status()
-rs.conf()
+#rs.status()
+#rs.conf()
 
-EOF
+#EOF

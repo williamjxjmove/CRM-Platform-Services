@@ -2,8 +2,12 @@
 
 if [ "$#" -eq 1 ]; then
   port=$1
+  replica_name=SetA
+elif [ "$#" -eq 2 ]; then
+  port=$1
+  replica_name=$2
 else
-  echo "Usage: $0 port"
+  echo "Usage: $0 port replica_name"
   exit 8
 fi
 
@@ -15,7 +19,7 @@ for i in `echo root@wjiang02vv.corp.homestore.net root@mlinde02vv.corp.homestore
  echo "Start MongoD daemon in <$i>:<$port>"
  echo "-----------------------------------"
 
- sudo ./start1.sh $i $port
+ sudo ./start1.sh $i $port $replica_name
 
 done
 

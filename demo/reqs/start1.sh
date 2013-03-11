@@ -3,20 +3,25 @@
 id | grep 'uid=0' >/dev/null
 if [ $? != 0 ]; then
  echo "You need to be 'root' to run this command: "
- echo "  sudo $0 server port"
+ echo "  sudo $0 server port replica_name"
  exit 2
 fi
 
 
-if [ $# != 2 ]; then
- echo "Usage: sudo $0 server port"
+if [ $# != 3 ]; then
+ echo "Usage: sudo $0 server port replica_Name"
  exit 3
 else
   server=$1
   port=$2
+  repset=$3
 fi
 
-MGDIR='mongo'
+DBDIR="db_${repset}_$port"
+LOGDIR="log_${repset}_$port"
+
+echo "dbpath is in: /usr/local/lib/$DBDIR"
+echo "logpath is in: /usr/local/lib/$LOGDIR"
 
 ssh $server  <<EOF
 
@@ -28,23 +33,21 @@ done
 
 pkill mongod
 
-cd  /home/movedev/
+cd  /usr/local/lib/
 
-[ -d "$MGDIR" ] || mkdir -p "$MGDIR"
-cd $MGDIR
-
-if [ -d "mg" ]; then
-  rm -rf mg/*
+if [ -d "$LOGDIR" ]; then
+  rm -rf $LOGDIR/*
 else
-  mkdir -p mg
-fi
-if [ -d "log" ]; then
-  rm -rf log/*
-else
-  mkdir -p log
+  mkdir -p $LOGDIR
 fi
 
-mongod --fork --port $port --replSet SetA --smallfiles --dbpath mg --logpath log/mg.log
+if [ -d "$DBDIR" ]; then
+  rm -rf $DBDIR/*
+else
+  mkdir -p $DBDIR
+fi
+
+mongod --fork --port $port --replSet $repset --smallfiles --dbpath /usr/local/lib/$DBDIR --logpath /usr/local/lib/$LOGDIR/$LOGDIR.log
 
 echo "======================================"
 echo "MongoD is running on <$server>:<$port>"
