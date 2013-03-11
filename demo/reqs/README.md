@@ -38,10 +38,10 @@ inits.sh 50111 SetA
  mongod --fork --port 50111 --replSet SetA --smallfiles --dbpath /usr/local/lib/db_SetA_50111 --logpath /usr/local/log/log_SetA_50111/log_SetA_50111.log
  
  
-## Monitor (mm.sh and monitor.sh)
-3) mm.sh
+## Monitor (mm3.sh and monitor.sh)
+3) mm3.sh
 <pre>
-mm.sh 50111
+mm3.sh 50111
 </pre>
 - will loop 30 seconds to check the init status.
 If it is done, the script will return the final rs.stauts(), if not, will display the un-finished message and quit within 30 seconds.
