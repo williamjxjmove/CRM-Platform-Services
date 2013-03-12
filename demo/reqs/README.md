@@ -17,8 +17,8 @@ Useful scripts:
 <pre>
 all1.sh  port replica_name 
 start1.sh server port replica_name
-init2.sh  port replica_name
-mm3.sh port
+init2.sh server1:port1 server2:port2 replica_name 
+mm3.sh server port
 </pre>
 
 
@@ -41,14 +41,15 @@ mongod --fork --port 50111 --replSet SetA --smallfiles --dbpath /usr/local/lib/d
 </pre> 
 
 2) init2.sh
-init2.sh port_number replica_name
+init2.sh server1:port1 server2:port2 replica_name
 <pre>
-$ init2.sh 50111 SetA
+$ init2.sh wjiang02vv.corp.homestore.net:50111 mlinde02vv.corp.homestore.net:50111 SetA
+
 </pre>
 will setup different servers by using '50111' port: primary and secondary.
  
 ## Monitor (mm3.sh and monitor.sh)
-3) mm3.sh
+3) mm3.sh  mlinde02vv.corp.homestore.net 50111
 <pre>
 $ mm3.sh 50111
 </pre>
@@ -57,7 +58,7 @@ will loop 30 seconds to check the init status.
 
 If it is done, the script will return the final rs.stauts(), if not, will display the un-finished message and quit within 30 seconds.
 
-## RPM
+## RPM generator
 There is a script reqs/rpm.sh to generate reqs-1.0.src.rpm file automatically.
 
 <pre>
