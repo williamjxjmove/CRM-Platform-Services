@@ -1,52 +1,93 @@
 #! /bin/bash
-
-# wjiang02vv.corp.homestore.net, loclahost, or read from config file?
-# port number dynamic assign?
-# rs.add('localhost:29102')
-# rs.add('localhost:29103')
-# rs.initiate()
+# inits.sh SetB '{ server1:wjiang02vv.corp.homestore.net:60002,   server2: mlinde02vv.corp.homestore.net:60002}'
 
 if [ "$#" -eq 2 ]; then
-  port=$1
-  repset=$2
+  repset=$1
+  json=$2
 else
-  echo "Usage: $0 port replica_name"
+  echo "Usage: $0 replica_name json_format_server:port_data"
   exit 6
 fi
 
 
-#{_id:2,host:"aguo02vv.corp.homestore.net:50006",priority:1},
-mongo wjiang02vv.corp.homestore.net:$port <<EOF
+sp=$2
+count=1
+ff=/tmp/gs${RANDOM}
 
-rs.status()
-
+str="
 var cfg = {
-  _id:"$repset",
+ _id:"\"$repset\"",
   members:
   [
-    {_id:0,host:"wjiang02vv.corp.homestore.net:$port",priority:4},
-    {_id:1,host:"mlinde02vv.corp.homestore.net:$port",priority:2},
+"
+
+cc=0
+echo $sp | tr "," "\n" | while read x;
+do
+  i=`echo $x | sed -e "s/^{//" -e "s/}$//" `
+  s=`echo $i | cut -d: -f2`
+  p=`echo $i | cut -d: -f3`
+  st="
+  {_id:$cc,host:"\"$s:$p\""},
+  "
+  echo $st>>$ff
+  cc=$((cc+1))
+done
+
+str="$str
+ `cat $ff`
   ]
 }
 
+"
+echo "======  1 ======"
+echo $str;
+echo "================"
+
+
+echo $sp | tr "," "\n" | while read x
+do
+  i=`echo $x | sed -e "s/^{//" -e "s/}$//" `
+  s=`echo $i | cut -d: -f2`
+  p=`echo $i | cut -d: -f3`
+
+  if [ $count = 1 ]; then
+
+  echo '------ 2 ----------'
+  echo $s
+  echo $p
+  echo $str
+  echo '-------------------'
+
+mongo $s:$p <<EOF
+
+rs.status();
+
+$str
+
 rs.initiate(cfg);
 
-rs.conf()
+rs.conf();
 
 EOF
 
-mongo mlinde02vv.corp.homestore.net:$port <<EOF
+  else
 
-rs.slaveOk()
+  echo '++++++++ 3 ++++++++'
+  echo $s
+  echo $p
+  echo '+++++++++++++++++++'
 
-rs.conf()
+mongo $s:$p <<EOF
+
+rs.slaveOk();
+
+rs.status();
 
 EOF
+  fi
 
+  count=$((count+1))
+done
 
-#mongo aguo02vv.corp.homestore.net:$port <<EOF
-
-#rs.status()
-#rs.conf()
-
-#EOF
+exit

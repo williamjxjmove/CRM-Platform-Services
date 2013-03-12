@@ -69,3 +69,30 @@ The configure file is solid in ~/rpmbuild/SPECS/reqs.spec
 The rpm.sh pack the tar.gz and use 'rpmbuild' to generate rpm file, and move it to reqs directory.
 
 At anytime, this script can be run to generate latested version for rpm file.
+
+
+# JSON input
+
+the script 'inits.sh' accepts JSON data, the steps are:
+
+(1)	$ all1.sh 60002 SetB
+call start1.sh to run replica_set name=”SetB” and port  “60002” in 3 servers.
+
+(2)	$ mm3.sh mlinde02vv.corp.homestore.net 60002
+open monitor to check the loop
+
+
+(3)	inits.sh SetB '{ server1:wjiang02vv.corp.homestore.net:60002, server2: mlinde02vv.corp.homestore.net:60002}'
+parameters:
+--	Replica Set Name, here is ‘SetB’
+--	Json format server:port:
+<pre>
+{server1: server:port,
+Server2: server:port,
+Server3:server:port,
+……
+}
+</pre>
+
+The script will init the first json object, here is ‘wjiang02vv.corp.homestore.net’ as primary, and the following are ‘secondary’.
+

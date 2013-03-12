@@ -1,4 +1,5 @@
 #! /bin/bash
+# mm3.sh mlinde02vv.corp.homestore.net 60001
 
 if [ "$#" -eq 2 ]; then
   server=$1

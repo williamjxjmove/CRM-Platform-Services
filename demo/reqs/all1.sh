@@ -1,4 +1,5 @@
 #! /bin/bash
+# all1.sh 60002 SetB
 
 if [ "$#" -eq 1 ]; then
   port=$1

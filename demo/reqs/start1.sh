@@ -38,12 +38,14 @@ cd  /usr/local/lib/
 if [ -d "$LOGDIR" ]; then
   rm -rf $LOGDIR/*
 else
+  rm -rf /usr/local/lib/log_*
   mkdir -p $LOGDIR
 fi
 
 if [ -d "$DBDIR" ]; then
   rm -rf $DBDIR/*
 else
+  rm -rf /usr/local/lib/db_*
   mkdir -p $DBDIR
 fi
 
