@@ -1,5 +1,4 @@
 
-
 ## resource servers:
 <pre>
 - aguo02vv.corp.homestore.net
@@ -35,16 +34,16 @@ all1.sh port_number replica_name
 e.g:
 $ all1.sh 50111 SetA
 </pre>
-will setup 3 different servers by using '50111' port.
-
-2) init2.sh
-inits.sh port_number replica_name
-<pre>
-inits.sh 50111 SetA
-</pre>
 - will run:
  mongod --fork --port 50111 --replSet SetA --smallfiles --dbpath /usr/local/lib/db_SetA_50111 --logpath /usr/local/log/log_SetA_50111/log_SetA_50111.log
  
+
+2) init2.sh
+init2.sh port_number replica_name
+<pre>
+init2.sh 50111 SetA
+</pre>
+will setup different servers by using '50111' port: primary and secondary.
  
 ## Monitor (mm3.sh and monitor.sh)
 3) mm3.sh
