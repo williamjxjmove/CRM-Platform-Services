@@ -52,3 +52,11 @@ mm3.sh 50111
 </pre>
 - will loop 30 seconds to check the init status.
 If it is done, the script will return the final rs.stauts(), if not, will display the un-finished message and quit within 30 seconds.
+
+## RPM
+There is a script reqs/rpm.sh to generate reqs-1.0.src.rpm file automatically.
+
+The configure file is solid in ~/rpmbuild/SPECS/reqs.spec
+The rpm.sh pack the tar.gz and use 'rpmbuild' to generate rpm file, and move it to reqs directory.
+
+At anytime, this script can be run to generate latested version for rpm file.
