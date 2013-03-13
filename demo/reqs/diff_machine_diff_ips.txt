@@ -1,0 +1,20 @@
+** NOTICE **
+Can't use localhost, use 192.168.56.32 instead.
+Port Number must be < 70000.
+
+
+
+The following steps work in my CentOS:(192.168.56.32)
+
+$ sudo ./start1.sh root@192.168.56.32 50001 SetBB
+$ sudo ./start1.sh root@192.168.56.32 50002 SetBB
+$ sudo ./start1.sh root@wjiang02vv.corp.homestore.net 50001 SetBB
+$ sudo ./start1.sh root@wjiang02vv.corp.homestore.net 50004 SetBB
+
+$ mm3.sh 192.168.56.32 50001
+(or monitor.sh localhost 50001)
+
+$ inits.sh SetBB "{server1: 192.168.56.32:50001,Server2: 192.168.56.32:50002,Server3: wjiang02vv.corp.homestore.net:50001,Server4: wjiang02vv.corp.homestore.net:50004}"
+
+======== results ============
+

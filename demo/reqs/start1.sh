@@ -31,21 +31,27 @@ do
   exit 4
 done
 
-pkill mongod
+# How about running in same machine? different ports.
+#pkill mongod
+#ps -ef | grep mongod |grep -v grep | awk '{print $2}' | while read pid
+#do
+#  kill -15 $pid
+#done
+
 
 cd  /usr/local/lib/
 
 if [ -d "$LOGDIR" ]; then
   rm -rf $LOGDIR/*
 else
-  rm -rf /usr/local/lib/log_*
+  #rm -rf /usr/local/lib/log_*
   mkdir -p $LOGDIR
 fi
 
 if [ -d "$DBDIR" ]; then
   rm -rf $DBDIR/*
 else
-  rm -rf /usr/local/lib/db_*
+  #rm -rf /usr/local/lib/db_*
   mkdir -p $DBDIR
 fi
 

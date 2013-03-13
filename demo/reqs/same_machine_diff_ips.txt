@@ -1,0 +1,75 @@
+The following steps work in my CentOS:
+
+$ sudo ./start1.sh root@localhost 50001 SetAA
+$ sudo ./start1.sh root@localhost 50002 SetAA
+$ sudo ./start1.sh root@localhost 50003 SetAA
+$ sudo ./start1.sh root@localhost 50004 SetAA
+
+$ mm3.sh localhost 50001
+(or monitor.sh localhost 50001)
+
+$ inits.sh SetAA "{server1: localhost:50001,Server2: localhost:50002,Server3: localhost:50003,Server3: localhost:50004}"
+
+======== results ============
+
+MongoDB shell version: 2.2.3
+connecting to: localhost:50001/test
+{
+	"set" : "SetAA",
+	"date" : ISODate("2013-03-12T23:43:48Z"),
+	"myState" : 1,
+	"members" : [
+		{
+			"_id" : 0,
+			"name" : "localhost:50001",
+			"health" : 1,
+			"state" : 1,
+			"stateStr" : "PRIMARY",
+			"uptime" : 633,
+			"optime" : Timestamp(1363131546000, 1),
+			"optimeDate" : ISODate("2013-03-12T23:39:06Z"),
+			"self" : true
+		},
+		{
+			"_id" : 1,
+			"name" : "localhost:50002",
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 279,
+			"optime" : Timestamp(1363131546000, 1),
+			"optimeDate" : ISODate("2013-03-12T23:39:06Z"),
+			"lastHeartbeat" : ISODate("2013-03-12T23:43:47Z"),
+			"pingMs" : 0
+		},
+		{
+			"_id" : 2,
+			"name" : "localhost:50003",
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 279,
+			"optime" : Timestamp(1363131546000, 1),
+			"optimeDate" : ISODate("2013-03-12T23:39:06Z"),
+			"lastHeartbeat" : ISODate("2013-03-12T23:43:47Z"),
+			"pingMs" : 0
+		},
+		{
+			"_id" : 3,
+			"name" : "localhost:50004",
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 279,
+			"optime" : Timestamp(1363131546000, 1),
+			"optimeDate" : ISODate("2013-03-12T23:39:06Z"),
+			"lastHeartbeat" : ISODate("2013-03-12T23:43:47Z"),
+			"pingMs" : 0
+		}
+	],
+	"ok" : 1
+}
+bye
+The MongoDB replica Set has already been initialized succesfully.
+------------------------
+It took <1> seconds.
