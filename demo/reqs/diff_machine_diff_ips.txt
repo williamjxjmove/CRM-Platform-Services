@@ -18,3 +18,85 @@ $ inits.sh SetBB "{server1: 192.168.56.32:50001,Server2: 192.168.56.32:50002,Ser
 
 ======== results ============
 
+[movedev@move-linux-dev reqs]$ inits.sh SetBB "{server1:
+192.168.56.32:50001,Server2: 192.168.56.32:50002,Server3:
+wjiang02vv.corp.homestore.net:50001,Server4:
+wjiang02vv.corp.homestore.net:50004}"
+======  1 ======
+var cfg = { _id:"SetBB", members: [ {_id:0,host:" 192.168.56.32:50001"},
+{_id:1,host:" 192.168.56.32:50002"}, {_id:2,host:" wjiang02vv.corp.homestore.net:50001"}, {_id:3,host:"
+wjiang02vv.corp.homestore.net:50004"}, ] }
+================
+------ 2 ----------
+192.168.56.32
+50001
+var cfg = { _id:"SetBB", members: [ {_id:0,host:" 192.168.56.32:50001"},
+{_id:1,host:" 192.168.56.32:50002"}, {_id:2,host:" wjiang02vv.corp.homestore.net:50001"}, {_id:3,host:"
+wjiang02vv.corp.homestore.net:50004"}, ] }
+-------------------
+MongoDB shell version: 2.2.3
+connecting to: 192.168.56.32:50001/test
+{
+	"startupStatus" : 3,
+	"info" : "run rs.initiate(...) if not yet done for the set",
+	"errmsg" : "can't get local.system.replset config from self or any
+seed (EMPTYCONFIG)",
+	"ok" : 0
+}
+{
+	"info" : "Config now saved locally.  Should come online in about a
+minute.",
+	"ok" : 1
+}
+{
+	"_id" : "SetBB",
+	"version" : 1,
+	"members" : [
+		{
+			"_id" : 0,
+			"host" : "192.168.56.32:50001"
+		},
+		{
+			"_id" : 1,
+			"host" : "192.168.56.32:50002"
+		},
+		{
+			"_id" : 2,
+			"host" : "wjiang02vv.corp.homestore.net:50001"
+		},
+		{
+			"_id" : 3,
+			"host" : "wjiang02vv.corp.homestore.net:50004"
+		}
+	]
+}
+bye
+++++++++ 3 ++++++++
+192.168.56.32
+50002
++++++++++++++++++++
+MongoDB shell version: 2.2.3
+connecting to: 192.168.56.32:50002/test
+{
+	"startupStatus" : 3,
+	"info" : "run rs.initiate(...) if not yet done for the set",
+	"errmsg" : "can't get local.system.replset config from self or any
+seed (EMPTYCONFIG)",
+	"ok" : 0
+}
+bye
+++++++++ 3 ++++++++
+wjiang02vv.corp.homestore.net
+50001
++++++++++++++++++++
+MongoDB shell version: 2.2.3
+connecting to: wjiang02vv.corp.homestore.net:50001/test
+{
+	"startupStatus" : 3,
+	"info" : "run rs.initiate(...) if not yet done for the set",
+	"errmsg" : "can't get local.system.replset config from self or any
+seed (EMPTYCONFIG)",
+	"ok" : 0
+}
+bye
+
