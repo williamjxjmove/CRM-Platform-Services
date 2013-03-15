@@ -1,7 +1,7 @@
 
 # Quick start
 
-## 1. get the codes:
+## 1. Get the codes:
 
     $ cd ~
     $ git clone git@github.com:MoveInc/CRM-Platform-Services.git
@@ -14,7 +14,9 @@
     $ inits.sh replica_name 'json_format servers list'
     $ mm3.sh server port
 
-That''s it!
+That's it!
+
+---------------------------------------------------------------------------
 
 ## 3. More details about processing:
 
@@ -52,7 +54,7 @@ If it is done, the script will return the final rs.stauts(), if not, will displa
 
 ## 3. Examples:
 
-Let''s say we have the following 3 servers, and want to use 'SetB' as ReplcaSet name, and  60002 as port number:
+Let's say we have the following 3 servers, and want to use 'SetB' as ReplcaSet name, and  60002 as port number:
 
 ### resource servers:
     - aguo02vv.corp.homestore.net
