@@ -103,10 +103,10 @@ In the CRM-Platform-Services/demo/MongoReplicaSet directory, there are the follo
 #### all1.sh
 
 Syntax:  
-		$ all1.sh port_number replica_name
+    $ all1.sh port_number replica_name
 
 An example:  
-		$ all1.sh 60002 SetA
+    $ all1.sh 60002 SetA
 will run:
 
 		mongod --fork --port 60002 --replSet SetA --smallfiles --dbpath /usr/local/lib/db_SetA_60002 --logpath /usr/local/log/log_SetA_60002/log_SetA_60002.log
@@ -129,10 +129,10 @@ The parameter format:
 #### init2.sh (an option for inits.sh, which accepts non-json parameter)
 
 Syntax:
-    	$ init2.sh server1:port1 server2:port2 replica_name
+    $ init2.sh server1:port1 server2:port2 replica_name
 
 An example:
-    	$ init2.sh wjiang02vv.corp.homestore.net:60002 mlinde02vv.corp.homestore.net:60002 SetA
+    $ init2.sh wjiang02vv.corp.homestore.net:60002 mlinde02vv.corp.homestore.net:60002 SetA
 
 #### mm3.sh
 
