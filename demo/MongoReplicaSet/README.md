@@ -95,44 +95,56 @@ So the follow can replace the above `inits.sh`:
 
 In the CRM-Platform-Services/demo/MongoReplicaSet directory, there are the following scripts available:
 
-* all1.sh 
-Syntax:
+* all1.sh
+
+Syntax:  
     $ all1.sh port_number replica_name
-An example:
+
+An example:  
     $ all1.sh 60002 SetA
-    will run:
+will run:
     mongod --fork --port 60002 --replSet SetA --smallfiles --dbpath /usr/local/lib/db_SetA_60002 --logpath /usr/local/log/log_SetA_60002/log_SetA_60002.log
+
 * start1.sh (calls by all1.sh)
+
 * inits.sh (accept json data)
+
 An example:
     $ inits.sh SetB '{ server1:wjiang02vv.corp.homestore.net:60002, server2: mlinde02vv.corp.homestore.net:60002}'
+
 The parameter format:
    {server1: server:port,
     Server2: server:port,
     Server3:server:port,
     ……
    }
+
 * init2.sh (an option for inits.sh, which accepts non-json parameter)
+
 Syntax:
     $ init2.sh server1:port1 server2:port2 replica_name
+
 An example:
     $ init2.sh wjiang02vv.corp.homestore.net:60002 mlinde02vv.corp.homestore.net:60002 SetA
+
 * mm3.sh
+
 * monitor.sh (an option by mm3.sh, which loop all replicaSet servers, not just 1)
-mm3.sh and monitor.sh all do monitoring.
-mm3.sh runs in 1 server to monitor, while monitor.sh monitor all ReplicaSet Servers. 
-**mm3.sh** is prior to monitor.sh.
+
+mm3.sh and monitor.sh all do monitoring.  
+mm3.sh runs in 1 server to monitor, while monitor.sh monitor all ReplicaSet Servers.   
+**mm3.sh** is prior to monitor.sh. 
     $ mm3.sh  mlinde02vv.corp.homestore.net 60002
 
 * rpm.sh (rpm generator)
     $ rpm.sh
+
 This is a script reqs/rpm.sh to generate reqs-1.0.src.rpm file automatically.
     $ ./rpm.sh
 
-The configure file is solid in ~/rpmbuild/SPECS/reqs.spec
-The rpm.sh pack the tar.gz and use 'rpmbuild' to generate rpm file, and move it to reqs directory.
-At anytime, this script can be run to generate latested version for rpm file.
-
+The configure file is solid in ~/rpmbuild/SPECS/reqs.spec  
+The rpm.sh pack the tar.gz and use 'rpmbuild' to generate rpm file, and move it to reqs directory.  
+At anytime, this script can be run to generate latested version for rpm file. 
 
 Besides, some support files:
 
