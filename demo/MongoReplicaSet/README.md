@@ -65,7 +65,7 @@ Let's say we have the following 3 servers, and want to use 'SetB' as ReplcaSet n
 
     $ cd CRM-Platform-Services/demo/MongoReplicaSet
 
-* startup MongoD servers:
+1. startup MongoD servers:
 
     $ all1.sh  60002 SetB 
 
@@ -76,7 +76,7 @@ Since `all1.sh` calls `start1.sh`, an optional step to replace `all1.sh` is:
     $ start1.sh aguo02vv.corp.homestore.net 60002 SetB  
 This will startup the 3 servers also, same as `all1.sh`.
 
-* init Replica-Set mongoD servers:
+2. init Replica-Set mongoD servers:
 
     $ inits.sh SetB '{ server1:wjiang02vv.corp.homestore.net:60002, server2: mlinde02vv.corp.homestore.net:60002, server3: aguo02vv.corp.homestore.net:60002}'
 
@@ -90,7 +90,7 @@ So the follow can replace the above `inits.sh`:
 
     $ init2.sh wjiang02vv.corp.homestore.net:60002 mlinde02vv.corp.homestore.net:60002 aguo02vv.corp.homestore.net:60002 SetB
 
-* monitor the processing:
+3. monitor the processing:
 
     $ mm3.sh mlinde02vv.corp.homestore.net 60002 
 
@@ -100,7 +100,7 @@ So the follow can replace the above `inits.sh`:
 
 In the CRM-Platform-Services/demo/MongoReplicaSet directory, there are the following scripts available:
 
-* all1.sh
+1. all1.sh
 
 Syntax:  
 		$ all1.sh port_number replica_name
@@ -111,9 +111,9 @@ will run:
 
 		mongod --fork --port 60002 --replSet SetA --smallfiles --dbpath /usr/local/lib/db_SetA_60002 --logpath /usr/local/log/log_SetA_60002/log_SetA_60002.log
 
-* start1.sh (calls by all1.sh)
+2. start1.sh (calls by all1.sh)
 
-* inits.sh (accept json data)
+3. inits.sh (accept json data)
 
 An example:
 		$ inits.sh SetB '{ server1:wjiang02vv.corp.homestore.net:60002, server2: mlinde02vv.corp.homestore.net:60002}'
@@ -126,7 +126,7 @@ The parameter format:
 		 ……
 		}
 
-* init2.sh (an option for inits.sh, which accepts non-json parameter)
+4. init2.sh (an option for inits.sh, which accepts non-json parameter)
 
 Syntax:
     	$ init2.sh server1:port1 server2:port2 replica_name
@@ -134,16 +134,16 @@ Syntax:
 An example:
     	$ init2.sh wjiang02vv.corp.homestore.net:60002 mlinde02vv.corp.homestore.net:60002 SetA
 
-* mm3.sh
+5. mm3.sh
 
-* monitor.sh (an option by mm3.sh, which loop all replicaSet servers, not just 1)
+6. monitor.sh (an option by mm3.sh, which loop all replicaSet servers, not just 1)
 
 mm3.sh and monitor.sh all do monitoring.  
 mm3.sh runs in 1 server to monitor, while monitor.sh monitor all ReplicaSet Servers.   
 **mm3.sh** is prior to monitor.sh. 
 		$ mm3.sh  mlinde02vv.corp.homestore.net 60002
 
-* rpm.sh (rpm generator)
+7. rpm.sh (rpm generator)
 		$ rpm.sh
 
 This is a script reqs/rpm.sh to generate reqs-1.0.src.rpm file automatically.
@@ -155,7 +155,7 @@ At anytime, this script can be run to generate latested version for rpm file.
 
 Besides, some support files:
 
-* README.md (this file)
-* reqs-1.0-1.el6.src.rpm (rpm.sh generated package)
-* server.json (an example of how the inits.sh input parameter looks like)
+8. README.md (this file)
+9. reqs-1.0-1.el6.src.rpm (rpm.sh generated package)
+10. server.json (an example of how the inits.sh input parameter looks like)
 
