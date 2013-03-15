@@ -69,24 +69,29 @@ Let's say we have the following 3 servers, and want to use 'SetB' as ReplcaSet n
 
     $ all1.sh  60002 SetB 
 
-It calls `start1.sh` to run replicaSet name=”SetB” and port “60002” in all the 3 servers.
+It calls `start1.sh` to run replicaSet name=”SetB” and port “60002” in all the 3 servers. 
 Since `all1.sh` calls `start1.sh`, an optional step to replace `all1.sh` is:
     $ start1.sh mlinde02vv.corp.homestore.net 60002 SetB
     $ start1.sh wjiang02vv.corp.homestore.net 60002 SetB
-    $ start1.sh aguo02vv.corp.homestore.net 60002 SetB
+    $ start1.sh aguo02vv.corp.homestore.net 60002 SetB  
 This will startup the 3 servers also, same as `all1.sh`.
 
 * init Replica-Set mongoD servers:
+
     $ inits.sh SetB '{ server1:wjiang02vv.corp.homestore.net:60002, server2: mlinde02vv.corp.homestore.net:60002, server3: aguo02vv.corp.homestore.net:60002}'
+
 The first json-item, ‘wjiang02vv.corp.homestore.net’ will be inited as primary server, and the following are ‘secondary’ servers.
 
 There is an option for `inits.sh` too, **init2.sh**, which syntax is:
+
     $ init2.sh server1:port1 server2:port2 replica_name
 
 So the follow can replace the above `inits.sh`:
+
     $ init2.sh wjiang02vv.corp.homestore.net:60002 mlinde02vv.corp.homestore.net:60002 aguo02vv.corp.homestore.net:60002 SetB
 
 * monitor the processing:
+
     $ mm3.sh mlinde02vv.corp.homestore.net 60002 
 
 ---------------------------------------------------------------------------
