@@ -105,7 +105,7 @@ In the CRM-Platform-Services/demo/MongoReplicaSet directory, there are the follo
 Syntax:  
     $ all1.sh port_number replica_name
 
-An example:  
+An example:
     $ all1.sh 60002 SetA
 will run:
 
