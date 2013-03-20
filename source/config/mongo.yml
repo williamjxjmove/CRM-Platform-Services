@@ -1,0 +1,18 @@
+defaults: &defaults
+  host: mlinde02vv.corp.homestore.net
+  port: 27017
+
+development:
+  <<: *defaults
+  database: crm_platform_services_dev
+
+test:
+  <<: *defaults
+  database: crm_platform_services_test
+
+# set these environment variables on your prod server
+production:
+  <<: *defaults
+  database: crm_platform_services
+  username: <%= ENV['MONGO_USERNAME'] %>
+  password: <%= ENV['MONGO_PASSWORD'] %>
