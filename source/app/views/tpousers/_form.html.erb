@@ -1,0 +1,41 @@
+<%= form_for(@tpouser) do |f| %>
+  <% if @tpouser.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tpouser.errors.count, "error") %> prohibited this tpouser from being saved:</h2>
+
+      <ul>
+      <% @tpouser.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :v %><br />
+    <%= f.text_field :v %>
+  </div>
+  <div class="field">
+    <%= f.label :UserId %><br />
+    <%= f.text_field :UserId %>
+  </div>
+  <div class="field">
+    <%= f.label :ProfileId %><br />
+    <%= f.text_field :ProfileId %>
+  </div>
+  <div class="field">
+    <%= f.label :Day1 %><br />
+    <%= f.text_field :Day1 %>
+  </div>
+  <div class="field">
+    <%= f.label :New1 %><br />
+    <%= f.text_field :New1 %>
+  </div>
+  <div class="field">
+    <%= f.label :Total1 %><br />
+    <%= f.text_field :Total1 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
